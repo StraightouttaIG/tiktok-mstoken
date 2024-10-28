@@ -25,7 +25,7 @@ Run the Script.
 ```
 >> python main.py
 ```
-Example response: 
+Example output: 
 ```
 Making initial GET request...
 Initial Token length: '124'
