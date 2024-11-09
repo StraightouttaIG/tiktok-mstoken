@@ -36,4 +36,11 @@ Waiting for msToken...
 You can then use the msToken value normally.
 
 --------------------------------------------------
+
+# TODO
+- Generate msToken using `/web/report/` Endpoint
+- Generate Working `strData`
+
+--------------------------------------------------
+
 Contact Telegram: @teeemvn
