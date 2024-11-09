@@ -1,3 +1,8 @@
+# Important Note
+- This Project Is a temporary workaround. Until I am able to Use undetected Firefox & stealth similarly to undetected chrome, when that happens It would be easy to generate `strData` and use the original `POST /web/report/` Method Which is much more Stable
+
+So this implementation may not be the best method yet.
+
 # Generate Tiktok msToken
 
 [This is a Tool to Generate valid "msToken" to use in Tiktok Endpoints.]
@@ -9,9 +14,8 @@ The length of the returned "msToken" seems to change based on the value provided
 - `108 Characters`: This happens when the request's "msToken" is empty. The response always gives back a 108-character token.
 - `116 Characters`: If you use a random, non-TikTok "msToken," like "hgrioahgriog" it generates a 116-character token.
 - `124 Characters`: When you visit TikTok.com/@tiktok for the first time with no cookie, you get a 124-character token.
-- `[144, 148, 152] Characters`: Using the previous 124-character token with the `POST /web/report/?msToken={124_Length_Token}` endpoint results in a [144, 148, 152] Length token. Length depends on browser used and other settings.
-
-- The `[144, 148, 152]` Character "msToken" Worked in `/api/post/item_list/` and `/api/uniqueid/check/` Endpoint without any issues. 
+- `[144, 152] Characters`: Using the previous 124-character token with the `POST /web/report/?msToken={124_Length_Token}` endpoint results in a [144, 148, 152] Length token. Length depends on browser used and other settings.
+- `148 Characters`: I was only able to generate this one by using a private Firefox window Then waiting until the msToken value updates. It's not possible on any other browser that I tried. Example: '5b2TD_RaPNOL4lQJ5eVWm6yAd0akV7k3cf8QuxevVeWdO110UU8iMwavrkP6lm4DUP4XQoj2-g1WE8L0pMy3o6fY8NRZDRZt0rw43dtX1xeqP5bOJbtlqKKW_niS1Eqg1gj9wuwDezalzgKJmwqL' It is also the only token type that works on 100% of the endpoints I tried. till now I can only generate this manually, Working on a way to automate it.
 
 When Using Stealth Selenium you are able to Generate valid msToken easily using this script.
 Not using stealth selenium will result in an invalid msToken!
